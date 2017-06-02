@@ -6,9 +6,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 const core_1 = require("@angular/core");
-class Hero {
-}
-exports.Hero = Hero;
 const HEROES = [
     { id: 11, name: 'Mr. Nice' },
     { id: 12, name: 'Narco' },
@@ -41,14 +38,7 @@ AppComponent = __decorate([
           <span class="badge">{{hero.id}}</span> {{hero.name}}
         </li>
       </ul>
-      <div *ngIf="selectedHero">
-        <h2>{{selectedHero.name}} details!</h2>
-        <div><label>id: </label>{{selectedHero.id}}</div>
-        <div>
-          <label>name: </label>
-          <input [(ngModel)]="selectedHero.name" placeholder="name"/> 
-        </div>
-      </div>
+      <hero-detail [hero]="selectedHero"></hero-detail>
   `,
         styles: [`
   .selected {
