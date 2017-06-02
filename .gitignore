@@ -1,0 +1,7 @@
+# IDEA metadata and output dirs
+*.iml
+*.ipr
+*.iws
+.idea
+
+node_modules
